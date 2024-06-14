@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+    <title>Students Portal</title>
+</head>
+<body>
+  <!-- header section with a title and description-->
+    <header class="bg-sky-500 text-center p-4">
+        <h1 class="text-4xl text-gray-900 font-extrabold mt-3">Smart Students Portal</h1><br>
+        <p class="text-gray-700 text-lg mt-2">This system allows users to efficiently manage student information. Easily register new students, update existing records, and delete unnecessary data with a user-friendly interface designed for quick and easy data management.</p>
+    </header>
+
+    <!-- navigation menu with links to different sections of the page -->
+    <nav>
+        <ul class="flex justify-center p-4">
+            <li class="shadow bg-sky-500 rounded-md px-2 py-1 mx-3 hover:bg-sky-300"><a href="#register">Register</a></li>
+            <li class="shadow bg-sky-500 rounded-md px-2 py-1 mx-3 hover:bg-sky-300"><a href="#registeredStudents">View Students</a></li>
+        </ul>
+    </nav>
+
+     <!-- registration form section -->
+    <section id="register">
+        <div class="flex items-center justify-center min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-md">
+                <div>
+                  <!-- title for the registration form -->
+                    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900 ml-64">Registration Form</h2>
+                </div>
+                <form id="studentForm" class="mt-8 space-y-6">
+                    <div class="rounded-md shadow-sm -space-y-px">
+                        <div>
+                          <!-- input for student name -->
+                            <label for="studentName" class="sr-only">Student Name</label>
+                            <input id="studentName" name="studentName" type="text" required class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:z-10 sm:text-sm" placeholder="Student Name">
+                        </div>
+                        <div>
+                          <!-- input for student ID -->
+                            <label for="studentID" class="sr-only">Student ID</label>
+                            <input id="studentID" name="studentID" type="number" required class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:z-10 sm:text-sm" placeholder="Student ID">
+                        </div>
+                        <div>
+                          <!-- input for student class -->
+                            <label for="studentClass" class="sr-only">Class</label>
+                            <input id="studentClass" name="studentClass" type="text" required class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:z-10 sm:text-sm" placeholder="Class">
+                        </div>
+                        <div>
+                          <!-- input for student roll number -->
+                            <label for="rollNo" class="sr-only">Roll Number</label>
+                            <input id="rollNo" name="rollNo" type="text" required class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:z-10 sm:text-sm" placeholder="Roll Number">
+                        </div>
+                        <div>
+                            <!-- input for student email -->
+                            <label for="email" class="sr-only">Email</label>
+                            <input id="email" name="email" type="email" required class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:z-10 sm:text-sm" placeholder="Email">
+                        </div>
+                        <div>
+                          <!-- input for student contact number -->
+                            <label for="contactNo" class="sr-only">Contact No</label>
+                            <input id="contactNo" name="contactNo" type="number" required class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:z-10 sm:text-sm" placeholder="Contact No">
+                        </div>
+                    </div>
+                    <div>
+                      <!-- submit button for the registration form -->
+                        <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-sky-600 hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Register
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- section to display the list of registered students -->
+    <section id="registeredStudents" class="m-4 p-4 rounded-sm shadow-sm">
+      <!-- div for the vertical scrollbar -->
+        <div id="studentTableContainer" class="overflow-auto max-h-80">
+          <!-- table for displaying student information -->
+            <table id="studentTable" class="w-full border-collapse">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Class</th>
+                        <th>Roll No</th>
+                        <th>Email</th>
+                        <th>Contact No</th>
+                        <th>Edit/Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Students will be appended here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+<script src="script.js"></script>
+</html>
